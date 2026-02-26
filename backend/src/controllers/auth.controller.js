@@ -26,8 +26,8 @@ const login = async (req, res, next) => {
     // Store JWT in HTTP-only cookie
     res.cookie("token", token, {
       httpOnly: true,
-      secure: NODE_ENV === "production",
-      sameSite: "strict",
+      secure: true, // MUST be true for HTTPS
+      sameSite: "none", // REQUIRED for cross-site cookies
       maxAge: 24 * 60 * 60 * 1000,
     });
 
