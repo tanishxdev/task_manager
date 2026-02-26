@@ -287,5 +287,3 @@ cd frontend
 npm install
 npm run dev
 ```
-
-Make sure environment variables are properly configured before running.
